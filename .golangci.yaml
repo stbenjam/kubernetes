@@ -22,6 +22,7 @@ linters:
   # - varcheck
     - ineffassign
     - logcheck
+    - nosprintfhostport
     - staticcheck
     - unused
 
