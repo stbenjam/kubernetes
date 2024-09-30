@@ -1,6 +1,6 @@
 // This is a generated file. Do not edit directly.
 
-go 1.22.0
+go 1.22.4
 
 use (
 	.
@@ -36,4 +36,8 @@ use (
 	./staging/src/k8s.io/sample-controller
 )
 
+replace github.com/openshift-eng/openshift-tests-extension => /Users/stbenjam/git/openshift-tests-extension
+
 replace github.com/openshift/google-cadvisor v0.49.0-openshift-4.17-1 => github.com/openshift/google-cadvisor v0.49.0-openshift-4.17-2
+
+replace github.com/onsi/ginkgo/v2 => github.com/stbenjam/onsi-ginkgo/v2 v2.0.0-20240924133505-1512c4b17aa2
