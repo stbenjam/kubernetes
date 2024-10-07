@@ -131,3 +131,6 @@ openshift*.tar.gz
 # Ensure that openapi definitions are not ignored to ensure that
 # openshift/origin can vendor them.
 !pkg/generated/openapi/zz_generated.openapi.go
+
+# Ignore binaries for k8s-tests
+/k8s-tests*

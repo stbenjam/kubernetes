@@ -20,7 +20,9 @@ require (
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
+	github.com/onsi/ginkgo/v2 v2.6.1-0.20241002180654-3ded579fec72
 	github.com/opencontainers/runtime-spec v1.0.3-0.20220909204839-494a5a6aca78 // indirect
+	github.com/openshift-eng/openshift-tests-extension v0.0.0-20241008125406-e4e57f0bc1e8
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/rogpeppe/go-internal v1.12.0 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
@@ -29,3 +31,5 @@ require (
 )
 
 replace k8s.io/mount-utils => ../mount-utils
+
+replace github.com/onsi/ginkgo/v2 => github.com/openshift/onsi-ginkgo/v2 v2.6.1-0.20241002180654-3ded579fec72
