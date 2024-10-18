@@ -60,6 +60,7 @@ spec.volumes[*].portworxVolume
 spec.volumes[*].photonPersistentDisk
 spec.volumes[*].scaleIO
 spec.volumes[*].storageos
+spec.volumes[*].image
 
 **Allowed Values:** undefined/null
 */
@@ -144,6 +145,8 @@ func restrictedVolumes_1_0(podMetadata *metav1.ObjectMeta, podSpec *corev1.PodSp
 				badVolumeTypes.Insert("portworxVolume")
 			case volume.ScaleIO != nil:
 				badVolumeTypes.Insert("scaleIO")
+			case volume.Image != nil:
+				badVolumeTypes.Insert("image")
 			case volume.StorageOS != nil:
 				badVolumeTypes.Insert("storageos")
 			default:

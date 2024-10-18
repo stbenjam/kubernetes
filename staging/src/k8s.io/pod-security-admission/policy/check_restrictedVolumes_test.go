@@ -65,6 +65,7 @@ func TestRestrictedVolumes(t *testing.T) {
 					{Name: "b19", VolumeSource: corev1.VolumeSource{PortworxVolume: &corev1.PortworxVolumeSource{}}},
 					{Name: "b20", VolumeSource: corev1.VolumeSource{ScaleIO: &corev1.ScaleIOVolumeSource{}}},
 					{Name: "b21", VolumeSource: corev1.VolumeSource{StorageOS: &corev1.StorageOSVolumeSource{}}},
+					{Name: "b22", VolumeSource: corev1.VolumeSource{Image: &corev1.ImageVolumeSource{}}},
 
 					// unknown type
 					{Name: "c1", VolumeSource: corev1.VolumeSource{}},
@@ -72,10 +73,10 @@ func TestRestrictedVolumes(t *testing.T) {
 			}},
 			expectReason: `restricted volume types`,
 			expectDetail: `volumes ` +
-				`"b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9", "b10", "b11", "b12", "b13", "b14", "b15", "b16", "b17", "b18", "b19", "b20", "b21", "c1"` +
+				`"b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9", "b10", "b11", "b12", "b13", "b14", "b15", "b16", "b17", "b18", "b19", "b20", "b21", "b22", "c1"` +
 				` use restricted volume types ` +
 				`"awsElasticBlockStore", "azureDisk", "azureFile", "cephfs", "cinder", "fc", "flexVolume", "flocker", "gcePersistentDisk", "gitRepo", "glusterfs", ` +
-				`"hostPath", "iscsi", "nfs", "photonPersistentDisk", "portworxVolume", "quobyte", "rbd", "scaleIO", "storageos", "unknown", "vsphereVolume"`,
+				`"hostPath", "image", "iscsi", "nfs", "photonPersistentDisk", "portworxVolume", "quobyte", "rbd", "scaleIO", "storageos", "unknown", "vsphereVolume"`,
 		},
 	}
 
